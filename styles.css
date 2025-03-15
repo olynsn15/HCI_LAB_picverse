@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: fit-content;
+}
+
+/* NAVIGATION BAR */
+.navbar-container{
+    background-color: #30645F;
+    width: 100%;
+    position: sticky;
+    top: 0;  
+    z-index: 1000;
+}
+
+.picverse-logo{
+    height: 40px;
+}
+
+.nav-inside{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.nav-items a {
+    font-family: "Lexend Deca", sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.nav-items a.active{
+    text-decoration: none;
+    box-shadow: inset 0 0 0 2px white;
+}
+
+.nav-items a:hover{
+    text-decoration: none;
+    box-shadow: inset 0 0 0 2px #9FC4BD;
+    color: #9FC4BD;
+}
+
+#btn-submission{
+    background-color: #DD7B55;
+}
+
+#btn-submission:hover, #btn-submission.active{
+    background-color: #F4F0E5;
+    color: #DD7B55;
+    box-shadow: none;
+}
+
+/* HOME */
+.hero{
+    background-color: pink;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.slider-image {
+    filter: blur(1px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.tagline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.tagline h1{
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    max-width: 50rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* ini kayaknya bisa dipindah jadi kayak central style for buttons? */
+.tagline a{
+    text-decoration: none;
+    color: white;
+    background-color: #DD7B55;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tagline a:hover{
+    background-color: #F4F0E5;
+    color: #DD7B55;
+    transition: all 0.3s;
+}
+
+.artwork-info{
+    position: absolute;
+    bottom: 8rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Lexend Deca", sans-serif;
+    opacity: 0;
+}
+
+.artwork-info.active{
+    opacity: 1;
+}
+
+.intro{
+    min-height: 110vh;
+    background-color: #9FC4BD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    padding: 8rem;
+    gap: 2rem;
+    color: #30645F;
+}
+
+.intro-text h1{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.intro-text p{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+
+/* ini kayaknya bisa dipindah jadi kayak central style for buttons? */
+.intro a{
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    background-color: #DD7B55;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Lexend Deca", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.intro a:hover{
+    background-color: #F4F0E5;
+    color: #DD7B55;
+    transition: all 0.3s;
+}
+
+#intro-p-1{
+    margin-bottom: 0.75rem;
+}
+
+#intro-img{
+    width: 40%;
+    height: 80vh;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.trending-tags {
+    min-height: 100vh; 
+    background-color: #F4F0E5;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-tags-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    padding: 4rem;
+    gap: 2.5rem;
+    color: #30645F;
+}
+
+.trending-tags-text h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.trending-tags-text p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.25rem;
+    text-align: justify;
+    text-align: center;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 100%;
+}
+
+.tags p {
+    width: fit-content;
+    text-decoration: none;
+    color: #DD7B55;
+    background-color: transparent;
+    padding: 0.75rem 1.5rem;
+    border: 2px #DD7B55 solid;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: center;
+}
+
+.tags p:hover{
+    background-color: #DD7B55;
+    color: #F4F0E5;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.featured-artworks{
+    min-height: 100vh;
+    background-color: #9FC4BD;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.featured-artworks-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #30645F;
+}
+
+.featured-artworks-text h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.featured-artworks-text p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.25rem;
+    text-align: justify;
+    text-align: center;
+}
+
+.fa-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.fa-card{
+    width: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fa-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+}
+
+.fa-card img{
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.fa-art-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    font-family: "Lexend Deca", sans-serif;
+    color: #30645F;
+}
+
+.fa-art-content .art-title {
+    font-weight: 500;
+    font-size: 1.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fa-art-content .art-artist {
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.art-likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.art-likes img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    border-radius: 0px;
+}
+
+.art-likes p {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/* GALLERY */
+.gallery{
+    min-height: 100vh;
+    background-color: #F4F0E5;
+}
+
+/* ABOUT US */
+.about-picverse{
+    min-height: 100vh;
+    background-color: pink;
+}
+
+.vision-mission{
+    min-height: 100vh;
+    background-color: #9FC4BD;
+}
+
+.key-features{
+    min-height: 100vh;
+    background-color: #F4F0E5;
+}
+
+/* COMMUNITY */
+.community{
+    min-height: 100vh;
+    background-color: #9FC4BD;
+}
+
+/* SUBMISSION */
+.submission{
+    min-height: 100vh;
+    background-color: #9FC4BD;
+}
+
+/* FOOTER */
+.footer-container{
+    min-height: fit-content;
+    background-color: #30645F;
+    padding: 2rem 2rem;
+}
+
+.picverse-logo-footer{
+    height: 20px;
+}
+
+.footer-inside{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+hr{
+    margin: 1.5rem 0rem;
+}
+
+.footer-cpy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 0.75em;
+    color: white;
+}
+
+.quick-links, .contact-us{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 600;
+    font-size: 0.75em;
+    color: white;
+}
+
+.quick-links, .contact-us p{
+    font-weight: 400;
+}
+
+.contact-us{
+    width: 20rem;
+}
