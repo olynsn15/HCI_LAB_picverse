@@ -66,17 +66,88 @@ body{
     background-color: #DD7B55;
 }
 
-#btn-submission:hover, #btn-submission.active{
+#btn-submission:hover{
     background-color: #F4F0E5;
     color: #DD7B55;
     box-shadow: none;
+}
+
+#btn-submission.active{
+    background-color: #ebe2ca;
+    color: #DD7B55;
+    box-shadow: none;
+}
+
+/* FONTS */
+h1{
+    font-size: 3.15em; 
+    font-family: "Space Grotesk", sans-serif;
+    color: #30645F;
+    font-weight: bold;
+    text-align: center;
+}
+
+p{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+/* BUTTONS */
+.buttons{
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    background-color: #DD7B55;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.buttons:hover{
+    background-color: #F4F0E5;
+    color: #DD7B55;
+    transition: all 0.3s;
+}
+
+/* TAGS */
+.tags{
+    width: fit-content;
+    text-decoration: none;
+    color: #DD7B55;
+    background-color: transparent;
+    padding: 0.75rem 1.5rem;
+    border: 2px #DD7B55 solid;
+    border-radius: 25px;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: center;
+}
+
+.tags:hover{
+    background-color: #DD7B55;
+    color: #F4F0E5;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tags.active{
+    background-color: #c4613a;
+    border: 2px #c4613a solid;
+    color: #F4F0E5;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* HOME */
 .hero{
     background-color: pink;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -124,28 +195,9 @@ body{
 .tagline h1{
     color: white;
     text-align: center;
-    font-size: 4em;
     max-width: 50rem;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-/* ini kayaknya bisa dipindah jadi kayak central style for buttons? */
-.tagline a{
-    text-decoration: none;
-    color: white;
-    background-color: #DD7B55;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 500;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.tagline a:hover{
-    background-color: #F4F0E5;
-    color: #DD7B55;
-    transition: all 0.3s;
+    font-size: 4em;
+    text-align: center;
 }
 
 .artwork-info{
@@ -166,7 +218,7 @@ body{
 }
 
 .intro{
-    min-height: 110vh;
+    min-height: fit-content;
     background-color: #9FC4BD;
     display: flex;
     align-items: center;
@@ -183,38 +235,9 @@ body{
 }
 
 .intro-text h1{
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-
+    text-align: start;
 }
 
-.intro-text p{
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 1.25rem;
-    text-align: justify;
-}
-
-
-/* ini kayaknya bisa dipindah jadi kayak central style for buttons? */
-.intro a{
-    width: fit-content;
-    text-decoration: none;
-    color: white;
-    background-color: #DD7B55;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: "Lexend Deca", sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.intro a:hover{
-    background-color: #F4F0E5;
-    color: #DD7B55;
-    transition: all 0.3s;
-}
 
 #intro-p-1{
     margin-bottom: 0.75rem;
@@ -230,9 +253,9 @@ body{
 }
 
 .trending-tags {
-    min-height: 100vh; 
+    min-height: fit-content; 
     background-color: #F4F0E5;
-    padding: 1rem 2rem;
+    padding: 6rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,21 +270,11 @@ body{
     color: #30645F;
 }
 
-.trending-tags-text h1 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
 .trending-tags-text p {
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 1.25rem;
-    text-align: justify;
     text-align: center;
 }
 
-.tags {
+.tags-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -269,32 +282,10 @@ body{
     max-width: 100%;
 }
 
-.tags p {
-    width: fit-content;
-    text-decoration: none;
-    color: #DD7B55;
-    background-color: transparent;
-    padding: 0.75rem 1.5rem;
-    border: 2px #DD7B55 solid;
-    border-radius: 25px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: "Lexend Deca", sans-serif;
-    text-align: center;
-}
-
-.tags p:hover{
-    background-color: #DD7B55;
-    color: #F4F0E5;
-    transition: all 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
 .featured-artworks{
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: #9FC4BD;
-    padding: 3rem 2rem;
+    padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,17 +300,7 @@ body{
     color: #30645F;
 }
 
-.featured-artworks-text h1 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
 .featured-artworks-text p {
-    font-family: "Lexend Deca", sans-serif;
-    font-size: 1.25rem;
-    text-align: justify;
     text-align: center;
 }
 
@@ -340,7 +321,7 @@ body{
     padding: 1rem;
     border-radius: 20px;
     gap: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .fa-card:hover {
@@ -400,23 +381,271 @@ body{
 .gallery{
     min-height: 100vh;
     background-color: #F4F0E5;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem 3.5rem;
+    gap: 1.5rem;
+}
+
+.gallery h1{
+    font-size: 2.25em;
+}
+
+.gallery-status{
+    color: #30645F;
+    font-size: 1.15em;
+}
+
+.gallery-tags-container{
+    display: flex;
+    gap: 0.75rem;
+    padding-bottom: 2rem;
+}
+
+.gallery-tags-container p{
+    font-size: 1.15em;
+}
+
+.gallery-status{
+    font-size: 1em;
+}
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: start;
+    padding-bottom: 5rem;
+}
+
+.gallery-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gallery-item h2{
+    font-family: "Lexend Deca", sans-serif;
+    color: #30645F;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.gallery-item p{
+    color: #30645F;
+    font-size: 1em;
+}
+
+.gallery-item img{
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 /* ABOUT US */
 .about-picverse{
-    min-height: 100vh;
-    background-color: pink;
+    min-height: fit-content;
+    background-color: #F4F0E5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 4rem;
+}
+
+.about-picverse-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    max-width: 50%;
+}
+
+.about-picverse-text h1 {
+    text-align: start;
+}
+
+.about-picverse-text a{
+    font-size: 1.35rem;
+}
+
+.about-picverse-text a:hover{
+    background-color: #EBE6D6;
+}
+
+.about-slider-container { 
+    width: 25rem;
+    height: 32.5rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.about-slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.about-slider-image.active {
+    opacity: 1;
 }
 
 .vision-mission{
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: #9FC4BD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 6rem 2rem;
+    color: #30645F;
+
+}
+
+.vision-mission h1{
+    max-width: 40%;
+}
+
+.vision-mission p {
+    text-align: center;
+    max-width: 50%;
+}
+
+.vision-mission-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 80%;
+}
+
+.vm-card{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 2rem;
+    gap: 1.25rem;
+    background-color: #B5DAD3;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.vm-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+}
+
+.vm-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.vm-header img{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: #F4F0E5;
+}
+
+.vm-header h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.vm-card p{
+    text-align: justify;
+    max-width: 100%;
 }
 
 .key-features{
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: #F4F0E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 6rem 2rem;
+    color: #30645F;
 }
+
+.key-features p{
+    max-width: 55%;
+    text-align: center;
+}
+
+.key-features-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 80%;
+}
+
+.kf-card{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+    gap: 2rem;
+    background-color: #EBE6D6;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.kf-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+}
+
+.icon-container {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #DD7B55;
+    padding: 1rem;
+}
+
+.icon-container img{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.kf-card h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.kf-card p{
+    text-align: justify;
+    max-width: 100%;
+}
+
 
 /* COMMUNITY */
 .community{

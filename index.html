@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picverse</title>
+    <title>PICVERSE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/title_logo.png">
 </head>
 <body>
     <nav class="navbar-container">
@@ -26,12 +27,13 @@
     <main>
         <div class="hero">
             <div class="slider-container">
-                <img src="./assets/slideshow-1.jpg" class="slider-image" data-title="Study for 'Catskill Creek'" data-artist="Thomas Cole">
-                <img src="./assets/slideshow-2.jpg" class="slider-image" data-title="Peaceful Valley" data-artist="Alexander Helwig Wyant">
+                <img src="./assets/hero/slideshow-1.jpg" class="slider-image" data-title="Study for 'Catskill Creek'" data-artist="Thomas Cole">
+                <img src="./assets/hero/slideshow-3.jpg" class="slider-image" data-title="Estuary at Day's End" data-artist="Simon de Vlieger">
+                <img src="./assets/hero/slideshow-2.jpg" class="slider-image" data-title="Peaceful Valley" data-artist="Alexander Helwig Wyant">
             </div>
             <div class="tagline">
                 <h1>Ignite Your Imagination and Share Your Vision.</h1>
-                <a href="./gallery.html">Start Exploring</a>
+                <a href="./gallery.html" class="buttons">Start Exploring</a>
             </div>
             <div class="artwork-info">
                 <p id="artwork-title">Study for "Catskill Creek"</p>
@@ -52,7 +54,7 @@
                     With a focus on accessibility and collaboration, the platform fosters inspiration, growth, and meaningful interactions, 
                     making it the ultimate hub for digital art and creative expression.
                 </p>
-                <a href="./about.html">Learn More</a>
+                <a href="./about.html" class="buttons">Learn More</a>
             </div>
         </div>
         <div class="trending-tags">
@@ -62,13 +64,13 @@
                     Explore the latest art trends and connect with creative minds. 
                     Use these tags to stay inspired and showcase your work!
                 </p>
-                <div class="tags">
-                    <p>#AbstractPainting</p>
-                    <p>#IllustrationArt</p>
-                    <p>#ContemporaryArt</p>
-                    <p>#ClassicArt</p>
-                    <p>#AcrylicPainting</p>
-                    <p>#MinimalistArt</p>
+                <div class="tags-container">
+                    <p class="tags">#AbstractPainting</p>
+                    <p class="tags">#IllustrationArt</p>
+                    <p class="tags">#ContemporaryArt</p>
+                    <p class="tags">#ClassicArt</p>
+                    <p class="tags">#AcrylicPainting</p>
+                    <p class="tags">#MinimalistArt</p>
                 </div>
             </div>
         </div>
@@ -82,7 +84,7 @@
             </div>
             <div class="fa-container">
                 <div class="fa-card">
-                    <img src="./assets/featured-arts-1.jpg" alt="Water Lilies">
+                    <img src="./assets/featured_arts/featured-arts-1.jpg" alt="Water Lilies">
                     <div class="fa-art-content">
                         <div class="fa-art-text">
                             <p class="art-title">Water Lilies</p>
@@ -95,7 +97,7 @@
                     </div>
                 </div>
                 <div class="fa-card">
-                    <img src="./assets/featured-arts-2.jpg" alt="The Scream">
+                    <img src="./assets/featured_arts/featured-arts-2.jpg" alt="The Scream">
                     <div class="fa-art-content">
                         <div class="fa-art-text">
                             <p class="art-title">The Scream</p>
@@ -108,7 +110,7 @@
                     </div>
                 </div>
                 <div class="fa-card">
-                    <img src="./assets/featured-arts-3.jpg" alt="Composition 8">
+                    <img src="./assets/featured_arts/featured-arts-3.jpg" alt="Composition 8">
                     <div class="fa-art-content">
                         <div class="fa-art-text">
                             <p class="art-title">Composition 8</p>
@@ -121,7 +123,7 @@
                     </div>
                 </div>
                 <div class="fa-card">
-                    <img src="./assets/featured-arts-4.jpg" alt="The Dance Class">
+                    <img src="./assets/featured_arts/featured-arts-4.jpg" alt="The Dance Class">
                     <div class="fa-art-content">
                         <div class="fa-art-text">
                             <p class="art-title">The Dance Class</p>
@@ -134,7 +136,7 @@
                     </div>
                 </div>
                 <div class="fa-card">
-                    <img src="./assets/featured-arts-5.jpg" alt="Irises">
+                    <img src="./assets/featured_arts/featured-arts-5.jpg" alt="Irises">
                     <div class="fa-art-content">
                         <div class="fa-art-text">
                             <p class="art-title">Irises</p>
@@ -170,10 +172,10 @@
             </div>
             <hr>
             <div class="footer-cpy">
-                <p>Copyright 2025, All Rights Reserved by Picverse</p>
+                <p>© Copyright 2025, All Rights Reserved by Picverse</p>
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
