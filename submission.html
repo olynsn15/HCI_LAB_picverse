@@ -25,7 +25,92 @@
     </nav>
 
     <main>
-        <div class="submission"></div>
+        <div class="submission-header">
+            <img src="./assets/submission.jpg">
+            <div class="submission-text">
+                <h1>Submit your art here!</h1>
+                <p>Showcase your creativity to the world by submitting your artwork to Picverse! 
+                    Fill out the form below to upload your work and share it with the community.</p>
+            </div>
+        </div>
+        <div class="submission-container">
+            <div class="submission-form">
+                <div class="form-input" id="email">
+                    <div class="question-container">
+                        <p class="number">1</p>
+                        <p class="label">Email</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" class="input-box" placeholder="enter your email">
+                    </div>
+                </div>
+                <div class="form-input" id="title">
+                    <div class="question-container">
+                        <p class="number">2</p>
+                        <p class="label">Title</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-box" placeholder="your artwork title">
+                    </div>
+                </div>
+                <div class="form-input" id="description">
+                    <div class="question-container">
+                        <p class="number">3</p>
+                        <p class="label">Description</p>
+                    </div>
+                    <div class="input-container">
+                        <textarea class="input-box" placeholder="birefly describe your artwork"></textarea>
+                    </div>
+                </div>
+                <div class="form-input" id="tags">
+                    <div class="question-container">
+                        <p class="number">4</p>
+                        <p class="label">Tags</p>
+                    </div>
+                    <div class="input-container">
+                        <select class="input-box">
+                            <option value="" disabled selected>add relevant tags</option>
+                            <option value="technology">#PortraitPainting</option>
+                            <option value="education">#LandscapeArt</option>
+                            <option value="science">#Impressionism</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-input" id="file">
+                    <div class="question-container">
+                        <p class="number">5</p>
+                        <p class="label">Upload</p>
+                    </div>
+                    <div class="input-container">
+                        <label for="file-upload" class="upload-box">
+                            <input type="file" id="file-upload" class="input-box" hidden accept="image/*">
+                            <span class="buttons">Choose file</span>
+                            <p id="file-name" class="file-name">No file chosen</p>
+                            <img id="file-thumbnail" class="file-thumbnail" src="" alt="" hidden>
+                        </label>
+                    </div>
+                </div>                
+                <div class="form-input" id="AI-generated">
+                    <div class="question-container">
+                        <p class="number">6</p>
+                        <p class="label">Is this content AI generated?</p>
+                    </div>
+                    <div class="input-container">
+                        <label class="radio-label">
+                            <input type="radio" name="ai-generated" value="yes" class="radio-input">
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="ai-generated" value="no" class="radio-input">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <p>Submit</p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -52,5 +137,6 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts/submission.js"></script>
 </body>
 </html>
